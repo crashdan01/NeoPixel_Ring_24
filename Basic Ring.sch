@@ -1,0 +1,232 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Basic_Ring
+LIBS:Basic Ring-cache
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Basic NeoPixel Ring 24 Hookup"
+Date "21 feb 2014"
+Rev "01"
+Comp "RHI"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L NPR_24 RING1
+U 1 1 530166A5
+P 5625 3025
+F 0 "RING1" H 6150 2550 60  0000 C CNN
+F 1 "NPR_24" H 5625 3025 60  0000 C CNN
+F 2 "" H 5625 3025 60  0000 C CNN
+F 3 "" H 5625 3025 60  0000 C CNN
+	1    5625 3025
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 2925 6700 2925
+Wire Wire Line
+	6700 2925 7050 2925
+Wire Wire Line
+	7050 2925 7325 2925
+Connection ~ 6700 2925
+$Comp
+L GND #PWR2
+U 1 1 530166DF
+P 6700 4225
+F 0 "#PWR2" H 6700 4225 30  0001 C CNN
+F 1 "GND" H 6700 4155 30  0001 C CNN
+F 2 "~" H 6700 4225 60  0000 C CNN
+F 3 "~" H 6700 4225 60  0000 C CNN
+	1    6700 4225
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 3775 6700 4050
+Wire Wire Line
+	6700 4050 6700 4225
+$Comp
+L C C1
+U 1 1 530166FC
+P 6700 3575
+F 0 "C1" H 6700 3675 40  0000 L CNN
+F 1 "1000µF" H 6706 3490 40  0000 L CNN
+F 2 "~" H 6738 3425 30  0000 C CNN
+F 3 "~" H 6700 3575 60  0000 C CNN
+	1    6700 3575
+	-1   0    0    -1  
+$EndComp
+Connection ~ 6700 4050
+$Comp
+L LM7805 U1
+U 1 1 53016733
+P 7725 2975
+F 0 "U1" H 7875 2779 60  0000 C CNN
+F 1 "LM7805" H 7725 3175 60  0000 C CNN
+F 2 "~" H 7725 2975 60  0000 C CNN
+F 3 "~" H 7725 2975 60  0000 C CNN
+	1    7725 2975
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 2925 6700 3375
+Wire Wire Line
+	8550 2925 8550 2725
+Wire Wire Line
+	8125 2925 8400 2925
+Wire Wire Line
+	8400 2925 8550 2925
+$Comp
+L GND #PWR3
+U 1 1 53016798
+P 7050 3850
+F 0 "#PWR3" H 7050 3850 30  0001 C CNN
+F 1 "GND" H 7050 3780 30  0001 C CNN
+F 2 "~" H 7050 3850 60  0000 C CNN
+F 3 "~" H 7050 3850 60  0000 C CNN
+	1    7050 3850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L C C3
+U 1 1 53016892
+P 8400 3275
+F 0 "C3" H 8400 3375 40  0000 L CNN
+F 1 ".1µF" H 8406 3190 40  0000 L CNN
+F 2 "~" H 8438 3125 30  0000 C CNN
+F 3 "~" H 8400 3275 60  0000 C CNN
+	1    8400 3275
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C2
+U 1 1 5301689F
+P 7050 3275
+F 0 "C2" H 7050 3375 40  0000 L CNN
+F 1 ".1µF" H 7056 3190 40  0000 L CNN
+F 2 "~" H 7088 3125 30  0000 C CNN
+F 3 "~" H 7050 3275 60  0000 C CNN
+	1    7050 3275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 2925 7050 3075
+Connection ~ 7050 2925
+Wire Wire Line
+	8400 2925 8400 3075
+Connection ~ 8400 2925
+Wire Wire Line
+	8400 3625 8400 3475
+Wire Wire Line
+	7050 3625 8400 3625
+Wire Wire Line
+	7050 3475 7050 3625
+Wire Wire Line
+	7050 3625 7050 3850
+$Comp
+L ARDUINO ARD1
+U 1 1 53016ADD
+P 3075 3800
+F 0 "ARD1" H 2775 4850 60  0000 C CNN
+F 1 "ARDUINO" H 2775 4950 60  0000 C CNN
+F 2 "~" H 3125 3250 60  0000 C CNN
+F 3 "~" H 3125 3250 60  0000 C CNN
+	1    3075 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR1
+U 1 1 53016C26
+P 2025 3825
+F 0 "#PWR1" H 2025 3825 30  0001 C CNN
+F 1 "GND" H 2025 3755 30  0001 C CNN
+F 2 "~" H 2025 3825 60  0000 C CNN
+F 3 "~" H 2025 3825 60  0000 C CNN
+	1    2025 3825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2175 3650 2025 3650
+Wire Wire Line
+	2025 3650 2025 3825
+Connection ~ 7050 3625
+Wire Wire Line
+	7725 3225 7725 3625
+Connection ~ 7725 3675
+$Comp
+L R R1
+U 1 1 53018418
+P 4450 3500
+F 0 "R1" V 4530 3500 40  0000 C CNN
+F 1 "470Ω" V 4457 3501 40  0000 C CNN
+F 2 "~" V 4380 3500 30  0000 C CNN
+F 3 "~" H 4450 3500 30  0000 C CNN
+	1    4450 3500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3975 4100 4450 4100
+NoConn ~ 6500 3125
+NoConn ~ 4750 3125
+Wire Wire Line
+	4750 2925 4450 2925
+Wire Wire Line
+	4450 2925 4450 3250
+Wire Wire Line
+	4450 4100 4450 3750
+Wire Wire Line
+	6700 4050 5725 4050
+Wire Wire Line
+	5725 4050 5725 3900
+NoConn ~ 5525 3900
+$Comp
+L +9V #PWR?
+U 1 1 53079EE6
+P 8550 2725
+F 0 "#PWR?" H 8550 2695 20  0001 C CNN
+F 1 "+9V" H 8550 2835 30  0000 C CNN
+F 2 "" H 8550 2725 60  0000 C CNN
+F 3 "" H 8550 2725 60  0000 C CNN
+	1    8550 2725
+	1    0    0    -1  
+$EndComp
+Text Label 8200 2925 0    30   ~ 6
+9V IN
+Text Label 7100 2925 0    30   ~ 6
+5V OUT
+Text Label 4050 4100 0    30   ~ 6
+SERIAL DATA
+$EndSCHEMATC
